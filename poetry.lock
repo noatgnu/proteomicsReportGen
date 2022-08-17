@@ -1,0 +1,654 @@
+[[package]]
+name = "aiohttp"
+version = "3.8.1"
+description = "Async http client/server framework (asyncio)"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+aiosignal = ">=1.1.2"
+async-timeout = ">=4.0.0a3,<5.0"
+attrs = ">=17.3.0"
+charset-normalizer = ">=2.0,<3.0"
+frozenlist = ">=1.1.1"
+multidict = ">=4.5,<7.0"
+yarl = ">=1.0,<2.0"
+
+[package.extras]
+speedups = ["aiodns", "brotli", "cchardet"]
+
+[[package]]
+name = "aiosignal"
+version = "1.2.0"
+description = "aiosignal: a list of registered asynchronous callbacks"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+frozenlist = ">=1.1.0"
+
+[[package]]
+name = "async-timeout"
+version = "4.0.2"
+description = "Timeout context manager for asyncio programs"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "attrs"
+version = "22.1.0"
+description = "Classes Without Boilerplate"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.extras]
+dev = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "mypy (>=0.900,!=0.940)", "pytest-mypy-plugins", "zope.interface", "furo", "sphinx", "sphinx-notfound-page", "pre-commit", "cloudpickle"]
+docs = ["furo", "sphinx", "zope.interface", "sphinx-notfound-page"]
+tests = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "mypy (>=0.900,!=0.940)", "pytest-mypy-plugins", "zope.interface", "cloudpickle"]
+tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>=4.3.0)", "mypy (>=0.900,!=0.940)", "pytest-mypy-plugins", "cloudpickle"]
+
+[[package]]
+name = "brotli"
+version = "1.0.9"
+description = "Python bindings for the Brotli compression library"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "brotlicffi"
+version = "1.0.9.2"
+description = "Python CFFI bindings to the Brotli library"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+cffi = ">=1.0.0"
+
+[[package]]
+name = "certifi"
+version = "2022.6.15"
+description = "Python package for providing Mozilla's CA Bundle."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "cffi"
+version = "1.15.1"
+description = "Foreign Function Interface for Python calling C code."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+pycparser = "*"
+
+[[package]]
+name = "charset-normalizer"
+version = "2.1.0"
+description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
+category = "main"
+optional = false
+python-versions = ">=3.6.0"
+
+[package.extras]
+unicode_backport = ["unicodedata2"]
+
+[[package]]
+name = "cssselect2"
+version = "0.6.0"
+description = "CSS selectors for Python ElementTree"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+tinycss2 = "*"
+webencodings = "*"
+
+[package.extras]
+test = ["coverage", "pytest-isort", "pytest-flake8", "pytest-cov", "pytest"]
+doc = ["sphinx-rtd-theme", "sphinx"]
+
+[[package]]
+name = "cycler"
+version = "0.11.0"
+description = "Composable style cycles"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "dill"
+version = "0.3.5.1"
+description = "serialize all of python"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, !=3.6.*"
+
+[package.extras]
+graph = ["objgraph (>=1.7.2)"]
+
+[[package]]
+name = "fonttools"
+version = "4.35.0"
+description = "Tools to manipulate font files"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+brotli = {version = ">=1.0.1", optional = true, markers = "platform_python_implementation == \"CPython\" and extra == \"woff\""}
+brotlicffi = {version = ">=0.8.0", optional = true, markers = "platform_python_implementation != \"CPython\" and extra == \"woff\""}
+zopfli = {version = ">=0.1.4", optional = true, markers = "extra == \"woff\""}
+
+[package.extras]
+woff = ["brotli (>=1.0.1)", "brotlicffi (>=0.8.0)", "zopfli (>=0.1.4)"]
+unicode = ["unicodedata2 (>=14.0.0)"]
+ufo = ["fs (>=2.2.0,<3)"]
+type1 = ["xattr"]
+symfont = ["sympy"]
+repacker = ["uharfbuzz (>=0.23.0)"]
+plot = ["matplotlib"]
+pathops = ["skia-pathops (>=0.5.0)"]
+lxml = ["lxml (>=4.0,<5)"]
+interpolatable = ["munkres", "scipy"]
+graphite = ["lz4 (>=1.7.4.2)"]
+all = ["xattr", "unicodedata2 (>=14.0.0)", "munkres", "brotli (>=1.0.1)", "scipy", "brotlicffi (>=0.8.0)", "uharfbuzz (>=0.23.0)", "skia-pathops (>=0.5.0)", "sympy", "matplotlib", "lz4 (>=1.7.4.2)", "zopfli (>=0.1.4)", "lxml (>=4.0,<5)", "fs (>=2.2.0,<3)"]
+
+[[package]]
+name = "frozenlist"
+version = "1.3.1"
+description = "A list-like structure which implements collections.abc.MutableSequence"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "html5lib"
+version = "1.1"
+description = "HTML parser based on the WHATWG HTML specification"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[package.dependencies]
+six = ">=1.9"
+webencodings = "*"
+
+[package.extras]
+lxml = ["lxml"]
+genshi = ["genshi"]
+chardet = ["chardet (>=2.2)"]
+all = ["lxml", "chardet (>=2.2)", "genshi"]
+
+[[package]]
+name = "idna"
+version = "3.3"
+description = "Internationalized Domain Names in Applications (IDNA)"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[[package]]
+name = "kiwisolver"
+version = "1.4.4"
+description = "A fast implementation of the Cassowary constraint solver"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "matplotlib"
+version = "3.5.3"
+description = "Python plotting package"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+cycler = ">=0.10"
+fonttools = ">=4.22.0"
+kiwisolver = ">=1.0.1"
+numpy = ">=1.17"
+packaging = ">=20.0"
+pillow = ">=6.2.0"
+pyparsing = ">=2.2.1"
+python-dateutil = ">=2.7"
+setuptools_scm = ">=4,<7"
+
+[[package]]
+name = "mizani"
+version = "0.7.4"
+description = "Scales for Python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+matplotlib = ">=3.5.0"
+numpy = ">=1.19.0"
+palettable = "*"
+pandas = ">=1.3.5"
+scipy = ">=1.5.0"
+
+[package.extras]
+doc = ["sphinx (>=4.5.0)", "numpydoc (>=0.9.1)"]
+testing = ["flake8", "pytest-cov"]
+
+[[package]]
+name = "multidict"
+version = "6.0.2"
+description = "multidict implementation"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "numpy"
+version = "1.23.2"
+description = "NumPy is the fundamental package for array computing with Python."
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
+name = "packaging"
+version = "21.3"
+description = "Core utilities for Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+pyparsing = ">=2.0.2,<3.0.5 || >3.0.5"
+
+[[package]]
+name = "palettable"
+version = "3.3.0"
+description = "Color palettes for Python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "pandas"
+version = "1.4.3"
+description = "Powerful data structures for data analysis, time series, and statistics"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+numpy = [
+    {version = ">=1.18.5", markers = "platform_machine != \"aarch64\" and platform_machine != \"arm64\" and python_version < \"3.10\""},
+    {version = ">=1.19.2", markers = "platform_machine == \"aarch64\" and python_version < \"3.10\""},
+    {version = ">=1.20.0", markers = "platform_machine == \"arm64\" and python_version < \"3.10\""},
+    {version = ">=1.21.0", markers = "python_version >= \"3.10\""},
+]
+python-dateutil = ">=2.8.1"
+pytz = ">=2020.1"
+
+[package.extras]
+test = ["hypothesis (>=5.5.3)", "pytest (>=6.0)", "pytest-xdist (>=1.31)"]
+
+[[package]]
+name = "patchworklib"
+version = "0.4.7"
+description = "patchwork for matplotlib"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+dill = "*"
+matplotlib = ">=3.4"
+numpy = ">=1.16"
+pandas = ">=0.24"
+
+[[package]]
+name = "patsy"
+version = "0.5.2"
+description = "A Python package for describing statistical models and for building design matrices."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+numpy = ">=1.4"
+six = "*"
+
+[package.extras]
+test = ["scipy", "pytest-cov", "pytest"]
+
+[[package]]
+name = "pillow"
+version = "9.2.0"
+description = "Python Imaging Library (Fork)"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-issues (>=3.0.1)", "sphinx-removed-in", "sphinxext-opengraph"]
+tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "packaging", "pyroma", "pytest", "pytest-cov", "pytest-timeout"]
+
+[[package]]
+name = "plotnine"
+version = "0.9.0"
+description = "A grammar of graphics for python"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+matplotlib = ">=3.5.0"
+mizani = ">=0.7.3"
+numpy = ">=1.19.0"
+pandas = ">=1.3.5"
+patsy = ">=0.5.1"
+scipy = ">=1.5.0"
+statsmodels = ">=0.13.2"
+
+[package.extras]
+test = ["pytest-cov", "flake8"]
+extra = ["geopandas", "scikit-learn", "scikit-misc", "adjusttext"]
+doc = ["jinja2 (<3.1)", "importlib-resources", "sphinx (>=3.0.0)", "numpydoc (>=0.9.1)", "nbsphinx", "jupyter"]
+dev = ["wheel", "twine"]
+all = ["plotnine", "plotnine", "plotnine", "plotnine"]
+
+[[package]]
+name = "pycparser"
+version = "2.21"
+description = "C parser in Python"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+
+[[package]]
+name = "pydyf"
+version = "0.2.0"
+description = "A low-level PDF generator."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+test = ["pillow", "coverage", "pytest-cov", "pytest-isort", "pytest-flake8", "pytest-xdist", "pytest"]
+doc = ["sphinx-rtd-theme", "sphinx"]
+
+[[package]]
+name = "pyparsing"
+version = "3.0.9"
+description = "pyparsing module - Classes and methods to define and execute parsing grammars"
+category = "main"
+optional = false
+python-versions = ">=3.6.8"
+
+[package.extras]
+diagrams = ["railroad-diagrams", "jinja2"]
+
+[[package]]
+name = "pyphen"
+version = "0.12.0"
+description = "Pure Python module to hyphenate text"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+test = ["coverage", "pytest-isort", "pytest-flake8", "pytest-cov", "pytest"]
+doc = ["sphinx-rtd-theme", "sphinx"]
+
+[[package]]
+name = "python-dateutil"
+version = "2.8.2"
+description = "Extensions to the standard Python datetime module"
+category = "main"
+optional = false
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
+
+[package.dependencies]
+six = ">=1.5"
+
+[[package]]
+name = "pytz"
+version = "2022.2.1"
+description = "World timezone definitions, modern and historical"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "requests"
+version = "2.28.1"
+description = "Python HTTP for Humans."
+category = "main"
+optional = false
+python-versions = ">=3.7, <4"
+
+[package.dependencies]
+certifi = ">=2017.4.17"
+charset-normalizer = ">=2,<3"
+idna = ">=2.5,<4"
+urllib3 = ">=1.21.1,<1.27"
+
+[package.extras]
+socks = ["PySocks (>=1.5.6,!=1.5.7)"]
+use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
+
+[[package]]
+name = "scipy"
+version = "1.6.1"
+description = "SciPy: Scientific Library for Python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+numpy = ">=1.16.5"
+
+[[package]]
+name = "setuptools-scm"
+version = "6.4.2"
+description = "the blessed package to manage your versions by scm tags"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+packaging = ">=20.0"
+tomli = ">=1.0.0"
+
+[package.extras]
+toml = ["setuptools (>=42)"]
+test = ["virtualenv (>20)", "pytest (>=6.2)"]
+
+[[package]]
+name = "six"
+version = "1.16.0"
+description = "Python 2 and 3 compatibility utilities"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+
+[[package]]
+name = "statsmodels"
+version = "0.13.2"
+description = "Statistical computations and models for Python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+numpy = ">=1.17"
+packaging = ">=21.3"
+pandas = ">=0.25"
+patsy = ">=0.5.2"
+scipy = ">=1.3"
+
+[package.extras]
+build = ["cython (>=0.29.26)"]
+develop = ["cython (>=0.29.26)"]
+docs = ["sphinx", "nbconvert", "jupyter-client", "ipykernel", "matplotlib", "nbformat", "numpydoc", "pandas-datareader"]
+
+[[package]]
+name = "tinycss2"
+version = "1.1.1"
+description = "A tiny CSS parser"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+webencodings = ">=0.4"
+
+[package.extras]
+test = ["coverage", "pytest-isort", "pytest-flake8", "pytest-cov", "pytest"]
+doc = ["sphinx-rtd-theme", "sphinx"]
+
+[[package]]
+name = "tomli"
+version = "2.0.1"
+description = "A lil' TOML parser"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "uniprotparser"
+version = "1.0.8"
+description = "Getting Uniprot Data from Uniprot Accession ID through Uniprot REST API"
+category = "main"
+optional = false
+python-versions = ">=3.9,<4.0"
+
+[package.dependencies]
+aiohttp = ">=3.8.1,<4.0.0"
+requests = ">=2.28.0,<3.0.0"
+
+[[package]]
+name = "urllib3"
+version = "1.26.11"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, <4"
+
+[package.extras]
+brotli = ["brotlicffi (>=0.8.0)", "brotli (>=1.0.9)", "brotlipy (>=0.6.0)"]
+secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
+socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
+
+[[package]]
+name = "weasyprint"
+version = "56.1"
+description = "The Awesome Document Factory"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+cffi = ">=0.6"
+cssselect2 = ">=0.1"
+fonttools = {version = ">=4.0.0", extras = ["woff"]}
+html5lib = ">=1.1"
+Pillow = ">=4.0.0"
+pydyf = ">=0.2.0"
+Pyphen = ">=0.9.1"
+tinycss2 = ">=1.0.0"
+
+[package.extras]
+doc = ["sphinx", "sphinx-rtd-theme"]
+test = ["pytest", "pytest-xdist", "pytest-flake8", "pytest-isort", "pytest-cov", "coverage"]
+
+[[package]]
+name = "webencodings"
+version = "0.5.1"
+description = "Character encoding aliases for legacy web content"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
+name = "yarl"
+version = "1.8.1"
+description = "Yet another URL library"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+idna = ">=2.0"
+multidict = ">=4.0"
+
+[[package]]
+name = "zopfli"
+version = "0.2.1"
+description = "Zopfli module for python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+test = ["pytest"]
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.9"
+content-hash = "ecba41929b13ca5c7e6dd364befd7a40d2a5d953ff9fa27e8d38e3da154f599a"
+
+[metadata.files]
+aiohttp = []
+aiosignal = []
+async-timeout = []
+attrs = []
+brotli = []
+brotlicffi = []
+certifi = []
+cffi = []
+charset-normalizer = []
+cssselect2 = []
+cycler = []
+dill = []
+fonttools = []
+frozenlist = []
+html5lib = []
+idna = []
+kiwisolver = []
+matplotlib = []
+mizani = []
+multidict = []
+numpy = []
+packaging = []
+palettable = []
+pandas = []
+patchworklib = []
+patsy = []
+pillow = []
+plotnine = []
+pycparser = []
+pydyf = []
+pyparsing = []
+pyphen = []
+python-dateutil = []
+pytz = []
+requests = []
+scipy = []
+setuptools-scm = []
+six = []
+statsmodels = []
+tinycss2 = []
+tomli = []
+uniprotparser = []
+urllib3 = []
+weasyprint = []
+webencodings = []
+yarl = []
+zopfli = []
