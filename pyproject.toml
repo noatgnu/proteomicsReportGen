@@ -7,10 +7,10 @@ authors = ["Toan Phung <toan.phungkhoiquoctoan@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 pandas = "^1.4.3"
-patchworklib = "^0.4.7"
 plotnine = "^0.9.0"
 uniprotparser = "^1.0.8"
 weasyprint = "^56.1"
+seaborn = "^0.11.2"
 
 [tool.poetry.dev-dependencies]
 
